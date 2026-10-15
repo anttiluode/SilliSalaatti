@@ -1,0 +1,9 @@
+{
+  "repository": "anttiluode/PhaseGraphFastWeightCell",
+  "commit": "f33c35cc3d0237ecf27ec851454047b2e35e0d4d",
+  "sha256": {
+    "cell.py": "32be7d8e0cf87268d167e4468e0e30adc0d0013f9101de1fc49a49842741fa70",
+    "quantization.py": "2d27e26dee1550a1e0a0ec60a31ef829c16cd35e9b0e8e60a8ad5a7f6ee49514",
+    "meta_ttt.py": "60d76b1592b9dad8c80eee5ae20007dec5dae602b69ab8125b966f4491211cf8"
+  }
+}
