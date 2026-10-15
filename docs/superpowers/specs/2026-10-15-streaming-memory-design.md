@@ -1,6 +1,6 @@
 # SilliSalaatti: controlled streaming-memory design
 
-Date: 15 October 2026. Status: **proposed; awaiting user review**.
+Date: 15 October 2026. Status: **approved; first writer benchmark implemented**. The controller and rotational-bank stages remain planned.
 
 ## Intent and scope
 
@@ -124,4 +124,4 @@ Publish the source revision, environment, configuration, data seeds, state/weigh
 
 ## Review boundary
 
-This commit contains the audit and proposed design only. After written-spec review, produce the implementation plan and select execution method before product implementation. Changes requested during review should update this document before the experiment is frozen.
+The user approved this design and authorized implementation. The [implementation plan](../plans/2026-10-15-writer-benchmark.md) covers the first writer benchmark and comparison controls. The [frozen-reader results](../../../results/frozen_meta/REPORT.md) and [training pilot](../../../results/training_pilot/REPORT.md) record what has been measured; canonical retraining, the controller and the rotational bank remain separate work.

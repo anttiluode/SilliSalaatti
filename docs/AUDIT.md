@@ -2,6 +2,8 @@
 
 Reviewed 15 October 2026. This is a source audit with a constructed numerical diagnostic, not a trained-network reproduction.
 
+Follow-up: the approved writer comparison is now implemented and measured on six real upstream checkpoints. See the [frozen-reader report](../results/frozen_meta/REPORT.md). The distinctions below describe the original audit and remain relevant to interpreting that experiment.
+
 ## 1. Locate the actual writer
 
 Pinned source: [PhaseGraphFastWeightCell at f33c35c](https://github.com/anttiluode/PhaseGraphFastWeightCell/tree/f33c35cc3d0237ecf27ec851454047b2e35e0d4d).

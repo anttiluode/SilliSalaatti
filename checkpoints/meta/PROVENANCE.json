@@ -1,0 +1,43 @@
+{
+  "repository": "anttiluode/PhaseGraphFastWeightCell",
+  "workflow_run": 38600274002,
+  "source_commit": "860b2821354c9993ac5c40922b126527b91e7ff8",
+  "files": [
+    {
+      "file": "seed41-phase_first_order.pt",
+      "sha256": "d66fb41922cd492818cf8b52e8dd2990b658586ada9f53f416fe26f252282fc9",
+      "archive_sha256": "7f41eafa6420f8a15c14a8bab5d9f947982e0df5369e408fc9609e5f0808d3eb",
+      "seed": 41
+    },
+    {
+      "file": "seed41-phase_meta.pt",
+      "sha256": "cc68949fa0d27bc669f70cfe1f811e13fb4ccb1938a32103908eaf03fe264c32",
+      "archive_sha256": "7f41eafa6420f8a15c14a8bab5d9f947982e0df5369e408fc9609e5f0808d3eb",
+      "seed": 41
+    },
+    {
+      "file": "seed97-phase_first_order.pt",
+      "sha256": "e6f984daf4366f8361e97cdd927567944fa2e4fb0f59422929c74a45d58eb07c",
+      "archive_sha256": "8f8edb676656d30e207ba59dfa1d3ec7afdc53b59707b8615988fb7780b81ae1",
+      "seed": 97
+    },
+    {
+      "file": "seed97-phase_meta.pt",
+      "sha256": "8538c3ca83ad0037303e4ebb79fc403841ff3b1eb3c7a92728cdc9e61b34ff98",
+      "archive_sha256": "8f8edb676656d30e207ba59dfa1d3ec7afdc53b59707b8615988fb7780b81ae1",
+      "seed": 97
+    },
+    {
+      "file": "seed127-phase_first_order.pt",
+      "sha256": "ef2694505534d1a407893000de8d3bffa813b84a8e78f8ecafa5642fa7e7c85f",
+      "archive_sha256": "db8f63c92137d768acc34135696b4dc4f70ba58f9c93d207b8104ebfae80d5d1",
+      "seed": 127
+    },
+    {
+      "file": "seed127-phase_meta.pt",
+      "sha256": "c009e8ceecbf0437d76b6327b4320656cf0849b7084c7af29580aae6da2eb105",
+      "archive_sha256": "db8f63c92137d768acc34135696b4dc4f70ba58f9c93d207b8104ebfae80d5d1",
+      "seed": 127
+    }
+  ]
+}

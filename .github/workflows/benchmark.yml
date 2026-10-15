@@ -1,0 +1,52 @@
+name: Manual frozen or training experiment
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        type: choice
+        options: [frozen, training]
+        default: frozen
+      kind:
+        type: choice
+        options: [phase, signed, vector]
+        default: phase
+      rule:
+        type: choice
+        options: [rms_reference, raw_same_step, raw_calibrated, raw_backtracked]
+        default: rms_reference
+      seed:
+        default: '41'
+      episodes:
+        default: '600'
+permissions:
+  contents: read
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e ".[plots]"
+      - name: Run selected experiment
+        env:
+          EXPERIMENT_MODE: ${{ inputs.mode }}
+          MEMORY_KIND: ${{ inputs.kind }}
+          WRITER_RULE: ${{ inputs.rule }}
+          TRAINING_SEED: ${{ inputs.seed }}
+          TRAINING_EPISODES: ${{ inputs.episodes }}
+        run: |
+          if [ "$EXPERIMENT_MODE" = frozen ]; then
+            python -m sillisalaatti.benchmark --checkpoint-dir checkpoints/meta --output runs/experiment
+          else
+            python -m sillisalaatti.train --kind "$MEMORY_KIND" --rule "$WRITER_RULE" --seed "$TRAINING_SEED" --episodes "$TRAINING_EPISODES" --output runs/experiment
+          fi
+          python -m sillisalaatti.plot runs/experiment/summary.json --output runs/experiment/comparison.png
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: silli-${{ github.run_id }}
+          path: runs/experiment
